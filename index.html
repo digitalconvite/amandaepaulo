@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amanda e Paulo</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Ícones do App/Navegador -->
+  <link href="imagens/icon.png" rel="shortcut icon"/>
+  <link href="imagens/icon-192.png" rel="icon" sizes="192x192"/>
+  <link href="imagens/icon-180.png" rel="apple-touch-icon" sizes="180x180"/>
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS Local -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- Música de fundo -->
+  <audio id="bg-music" loop src="audio/musica.mp3"></audio>
+  
+  <div class="card-container">
+
+    <!-- FOTO DO TOPO (Floral Cima Ajustado) -->
+    <div class="top-photo-wrapper">
+      <img src="imagens/foto1.png" alt="Flores">
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div class="main-content">
+      
+      <!-- CONTAINER DOS NOMES COM A DECORAÇÃO -->
+      <div class="names-container">
+        <h1 class="couple-names">
+          Amanda
+          <span>&</span>
+          Paulo
+        </h1>
+        <!-- Bloco de Música com Texto -->
+        <div class="music-wrapper">
+          <button id="music-btn" class="music-toggle-btn" aria-label="Tocar Música">
+            <i class="fa-solid fa-music"></i>
+          </button>
+          <span class="music-label">Ouça nossa música</span>
+        </div>
+      </div>
+       
+      <!-- Versículo Bíblico -->
+      <p class="versiculo-biblico">
+        ‘Tudo tem o seu tempo determinado, e há tempo <br> 
+        para todo o propósito debaixo do céu.’<br>
+        (Eclesiastes 3:1).
+      </p>
+
+      <!-- Texto da Saudação -->
+      <p class="invitation-text">
+        Chegou o momento de consagrarmos nosso amor diante de Deus e seria muito especial ter você conosco.
+      </p>
+
+      <!-- SEÇÃO DA DATA COM DECORAÇÕES -->
+      <div class="date-wrapper">
+        <img src="imagens/floral1.png" alt="Decoração Topo" class="date-deco date-deco-top">
+
+        <!-- DATA EM DESTAQUE -->
+        <div class="date-badge">
+          12.12.2026
+        </div>
+
+        <img src="imagens/floral2.png" alt="Decoração Base" class="date-deco date-deco-bottom">
+      </div>
+
+      <!-- HORA -->
+      <div class="time-text">
+        <i class="far fa-clock"></i>
+        <span>17H30</span>
+      </div>
+      
+      <!-- LOCAL -->
+      <div class="location-info">
+        <div class="divider-line"></div>
+        <p class="location-text">Local: <br>Paróquia São José</p>
+        <div class="divider-line"></div>
+      </div>
+
+      <!-- INSTRUÇÃO -->
+      <p class="touch-instruction">Toque para interagir</p>
+
+      <!-- BOTÕES INTERATIVOS -->
+      <div class="interactive-buttons">
+
+        <!-- Botão 1: Local da Cerimônia (Igreja) -->
+        <a href="https://digitalconvite.github.io/modelo-dourado-pronto/local-cerimonia.html" rel="noopener noreferrer" class="btn-row">
+          <div class="icon-square">
+            <i class="fas fa-church"></i>
+          </div>
+          <span class="btn-label">Local da Cerimônia</span>
+        </a>
+
+        <!-- Botão 2: Local da recepção -->
+        <a href="https://digitalconvite.github.io/modelo-dourado-pronto/local-recepcao.html" rel="noopener noreferrer" class="btn-row reverse">
+          <div class="icon-square">
+            <i class="fas fa-glass-cheers"></i>
+          </div>
+          <span class="btn-label">Local da recepção</span>
+        </a>
+
+        <!-- Botão 3: Confirmar Presença -->
+        <div class="btn-row" id="rsvpBtn">
+          <div class="icon-square">
+            <i class="fas fa-user-check"></i>
+          </div>
+          <span class="btn-label">Confirmar Presença</span>
+        </div>
+
+        <!-- Botão 4: Lista de presentes -->
+        <a href="https://digitalconvite.github.io/modelo-dourado-pronto/lista-de-presentes.html" rel="noopener noreferrer" class="btn-row reverse">
+          <div class="icon-square">
+            <i class="fa-solid fa-gift"></i>
+          </div>
+          <span class="btn-label">Lista de presentes</span>
+        </a>
+
+      </div>
+      
+      <!-- CONTAGEM REGRESSIVA -->
+      <div class="countdown-container">
+        <div class="countdown-title">FALTAM</div>
+        <div class="countdown-timer" id="countdown">
+          <div class="time-box">
+            <span id="days">00</span>
+            <small>dias</small>
+          </div>
+          <div class="time-box">
+            <span id="hours">00</span>
+            <small>horas</small>
+          </div>
+          <div class="time-box">
+            <span id="minutes">00</span>
+            <small>min</small>
+          </div>
+          <div class="time-box">
+            <span id="seconds">00</span>
+            <small>seg</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="waiting-text">
+        Esperamos<br>por você!
+      </div>
+
+      <!-- FOTO DA PARTE INFERIOR -->
+      <div class="bottom-section">
+        <div class="bottom-photo-wrapper">
+          <img src="imagens/foto-final.png" alt="flores douradas">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- MODAL RSVP -->
+  <div id="rsvpModal" class="modal">
+    <div class="modal-content">
+      <h3>Confirmação de Presença</h3>
+      <form id="rsvpForm">
+        
+        <div class="form-group">
+          <label for="nome">Seu Nome Completo:</label>
+          <input type="text" id="nome" placeholder="Digite seu nome completo" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="presencaCelebracao">Celebração:</label>
+          <select id="presencaCelebracao" required>
+            <option value="Sim, estarei presente na Celebração">Sim, estarei presente na Celebração</option>
+            <option value="Não poderei ir à Celebração">Não poderei ir à Celebração</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="presencaRecepcao">Recepção / Festa:</label>
+          <select id="presencaRecepcao" required>
+            <option value="Sim, estarei presente na Recepção">Sim, estarei presente na Recepção</option>
+            <option value="Não poderei ir à Recepção">Não poderei ir à Recepção</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="acompanhantes">Quantidade de Acompanhantes:</label>
+          <input type="number" id="acompanhantes" placeholder="0" min="0" value="0">
+        </div>
+
+        <button type="submit" class="modal-btn">Enviar via WhatsApp</button>
+        <button type="button" class="modal-btn btn-cancel" id="closeRsvpBtn">Fechar</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript Local -->
+  <script src="./script.js"></script>
+</body>
+</html>

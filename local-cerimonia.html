@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cerimônia</title>
+  
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Estilos da página de localização -->
+  <style>
+    :root {
+      --bg-color: #FAF8F5;
+      --primary-color: #e35336;
+      --text-gold: #e35336;
+      --font-cursive: 'Alex Brush', cursive;
+      --font-serif: 'Cinzel', serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      font-family: var(--font-serif);
+      color: var(--text-gold);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .page-container {
+      width: 100%;
+      max-width: 480px;
+      padding: 30px 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .title {
+      font-family: var(--font-cursive);
+      font-size: 3rem;
+      color: var(--primary-color);
+      margin-bottom: 5px;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .map-frame {
+      width: 100%;
+      height: 380px;
+      border: 2px solid var(--primary-color);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      margin-bottom: 25px;
+    }
+
+    .map-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Botão de Voltar ao Convite */
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: var(--primary-color);
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .back-btn:hover {
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-container">
+    <h1 class="title">Local da cerimônia</h1>
+    <p class="subtitle">Paróquia São José</p>
+
+    <!-- MAPA INCORPORADO DO GOOGLE MAPS (Entrar no google maps, digitar o local, compartilhar e escoher opção incorporar um mapa e copiar apenas o link) -->
+    <div class="map-frame">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.8207402276644!2d-46.46618812372179!3d-23.68236776605068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce6bd933cfce6f%3A0x5f9370c6bc0d92a1!2sR.%20Lasar%20Segall%2C%20333%20-%20Vila%20Assis%20Brasil%2C%20Mau%C3%A1%20-%20SP%2C%2009370-700!5e0!3m2!1spt-BR!2sbr!4v1793799802516!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <!-- BOTÃO PARA VOLTAR -->
+    <a href="./index.html" class="back-btn">
+      <i class="fas fa-arrow-left"></i>
+      Voltar ao Convite
+    </a>
+  </div>
+
+</body>
+</html>
