@@ -1,0 +1,352 @@
+:root {
+  --bg-color: #fefefe;
+  --primary-color: #A8783F;
+  --text-gold: #A8783F;
+  --text-dark: #6E533F;
+  --font-cursive: 'Alex Brush', cursive;
+  --font-serif: 'Cinzel', serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #faf8f5;
+  font-family: var(--font-serif);
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Container do Convite */
+.card-container {
+  width: 100%;
+  max-width: 480px;
+  background-color: var(--bg-color);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  min-height: 100vh;
+}
+
+/* Foto do Topo (Floral Cima - Ocupa 100% da Largura) */
+.top-photo-wrapper {
+  width: 100%;
+  height: 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+.top-photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.top-photo-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(to bottom, rgba(250,248,245,0) 0%, var(--bg-color) 100%);
+}
+
+/* Conteúdo Central */
+.main-content {
+  padding: 20px 20px 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.names-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 5px 0 20px;
+}
+
+.names-container .couple-names {
+  margin: 0;
+}
+
+.couple-names {
+  font-family: var(--font-cursive);
+  font-size: 3.8rem;
+  color: var(--primary-color);
+  line-height: 1.1;
+  margin: 10px 0 20px;
+  font-weight: normal;
+}
+
+.couple-names span {
+  display: block;
+  font-size: 2.2rem;
+  margin: -5px 0;
+}
+
+.versiculo-biblico {
+  font-size: 0.6rem;
+  color: var(--text-gold);
+  letter-spacing: 1.5px;
+  line-height: 1.8;
+  max-width: 320px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.invitation-text {
+  font-size: 0.8rem;
+  color: var(--text-gold);
+  letter-spacing: 1.5px;
+  line-height: 1.8;
+  max-width: 320px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.information-extra {
+  font-size: 0.8rem;
+  color: var(--text-gold);
+  letter-spacing: 1.5px;
+  line-height: 1.8;
+  max-width: 320px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.location-info {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.divider-line {
+  width: 80%;
+  height: 1px;
+  background-color: var(--text-gold);
+  opacity: 0.5;
+  margin: 0 auto;
+}
+
+.location-text {
+  font-size: 0.99rem;
+  color: var(--text-gold);
+  letter-spacing: 2px;
+  padding: 8px 0;
+  text-transform: uppercase;
+}
+
+/* Horário do Evento */
+.time-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 1.3rem;
+  color: var(--text-gold);
+  letter-spacing: 1.5px;
+  margin-bottom: 30px;
+}
+
+.time-text i,
+.time-text span {
+  color: var(--text-gold);
+}
+
+.date-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0 30px;
+}
+
+.date-wrapper .date-badge {
+  margin: 1px 0;
+}
+
+.date-badge {
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  font-size: 2.2rem;
+  font-weight: 500;
+  padding: 10px 40px;
+  letter-spacing: 3px;
+  border: 1px solid rgba(255,255,255,0.4);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.date-deco {
+  width: 220px;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.date-deco-top {
+  margin-bottom: 2px;
+}
+
+.date-deco-bottom {
+  margin-top: 2px;
+}
+
+.touch-instruction {
+  font-size: 0.75rem;
+  color: var(--text-gold);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.interactive-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.btn-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.btn-row:hover {
+  transform: scale(1.03);
+}
+
+.icon-square {
+  width: 70px;
+  height: 70px;
+  background-color: var(--primary-color);
+  border: 1px solid var(--text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.btn-label {
+  font-size: 0.85rem;
+  color: var(--text-gold);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.btn-label::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-gold);
+}
+
+/* Foto Rodapé (Floral Baixo - Ocupa 100% da Largura) */
+.bottom-section {
+  width: 100%;
+  position: relative;
+}
+
+.bottom-photo-wrapper {
+  width: 100%;
+  height: 120px;
+  position: relative;
+}
+
+.bottom-photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom; /* Foca na parte de baixo da imagem floral */
+}
+.waiting-text {
+  font-family: var(--font-cursive);
+  font-size: 3.8rem;
+  color: var(--primary-color);
+  line-height: 1.1;
+  margin: 10px 0 20px;
+  font-weight: normal;
+}
+
+.waiting-text span {
+  display: block;
+  font-size: 2.2rem;
+  margin: -5px 0;
+}
+
+/* Estilos da Contagem Regressiva */
+.countdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: -10px 0 25px; /* Ajuste a margem se preferir mais distante ou próximo */
+}
+
+.countdown-title {
+  font-size: 0.75rem;
+  color: var(--text-gold, #e35336);
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  font-family: var(--font-serif, serif);
+}
+
+.countdown-timer {
+  display: flex;
+  gap: 12px;
+}
+
+.time-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 45px;
+}
+
+.time-box span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-color, #e35336);
+  font-family: var(--font-serif, serif);
+  line-height: 1;
+}
+
+.time-box small {
+  font-size: 0.65rem;
+  color: var(--text-gold, #e35336);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
