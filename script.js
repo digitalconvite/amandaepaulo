@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     rsvpForm.addEventListener('submit', function(e) {
       e.preventDefault();
 
-      const numeroWhatsapp = "5511973968625"; 
+      const numeroWhatsapp = "5511976259461"; 
 
       const nome = document.getElementById('nome').value;
       const celebracao = document.getElementById('presencaCelebracao').value;
@@ -104,7 +104,7 @@ if (bgMusic && musicBtn) {
 /* ==========================================================================
      3. CONTAGEM REGRESSIVA
      ========================================================================== */
-const targetDate = new Date("December 12, 2026 17:30:00").getTime();
+const targetDate = new Date("January 09, 2027 00:00:00").getTime();
 
 function updateCountdown() {
   const now = new Date().getTime();
