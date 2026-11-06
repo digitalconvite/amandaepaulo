@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   /* ==========================================================================
-     1. CONFIRMAÇÃO DE PRESENÇA (MODAL E WHATSAPP)
+     1. CONFIRMAÇÃO DE PRESENÇA
      ========================================================================== */
   const modal = document.getElementById('rsvpModal');
   const openBtn = document.getElementById('rsvpBtn');
@@ -47,13 +47,13 @@ document.addEventListener('DOMContentLoaded', function() {
       let mensagem = `*Confirmação de Presença - Casamento Amanda & Paulo*\n\n`;
       mensagem += `👤 *Nome:* ${nome}\n`;
       mensagem += `🥂 *Recepção:* ${recepcao}\n`;
-      mensagem += `👥 *Acompanhantes:* ${acompanhantes ? acompanhantes : 'Nenhum'}`;
+      mensagem += `👥 *Acompanhantes:* ${acompanhantes || 'Nenhum'}`;
 
       const urlWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(mensagem)}`;
       window.open(urlWhatsapp, '_blank');
     });
   }
-});
+}); // <-- CHAVE CORRETAMENTE FECHADA AQUI
 
 /* ==========================================================================
      2. CONTROLE DA MÚSICA DE FUNDO
