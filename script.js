@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Envio do formulário via WhatsApp
+ // Envio do formulário via WhatsApp
   if (rsvpForm) {
     rsvpForm.addEventListener('submit', function(e) {
       e.preventDefault();
@@ -41,20 +41,18 @@ document.addEventListener('DOMContentLoaded', function() {
       const numeroWhatsapp = "5511976259461"; 
 
       const nome = document.getElementById('nome').value;
-      const celebracao = document.getElementById('presencaCelebracao').value;
       const recepcao = document.getElementById('presencaRecepcao').value;
       const acompanhantes = document.getElementById('acompanhantes').value;
 
       let mensagem = `*Confirmação de Presença - Casamento Amanda & Paulo*\n\n`;
       mensagem += `👤 *Nome:* ${nome}\n`;
       mensagem += `🥂 *Recepção:* ${recepcao}\n`;
-      mensagem += `👥 *Acompanhantes:* ${acompanhantes}`;
+      mensagem += `👥 *Acompanhantes:* ${acompanhantes || 'Nenhum'}`; // Se deixar vazio, avisa que não tem
 
       const urlWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(mensagem)}`;
       window.open(urlWhatsapp, '_blank');
     });
   }
-});
 
 /* ==========================================================================
      2. CONTROLE DA MÚSICA DE FUNDO
