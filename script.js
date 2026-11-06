@@ -47,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
       let mensagem = `*Confirmação de Presença - Casamento Amanda & Paulo*\n\n`;
       mensagem += `👤 *Nome:* ${nome}\n`;
-      mensagem += `⛪ *Celebração:* ${celebracao}\n`;
       mensagem += `🥂 *Recepção:* ${recepcao}\n`;
       mensagem += `👥 *Acompanhantes:* ${acompanhantes}`;
 
